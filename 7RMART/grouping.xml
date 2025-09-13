@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  
+  <test  name="ChromeTest">
+  
+  <parameter name="browser" value="chrome"></parameter>
+  <groups>
+  <run>
+  <include name="regression"></include>
+  </run>
+  </groups>
+  
+  <class name="testscript.ManageCategoryTest"/>
+         <class name="testscript.ManageContactUsTest"/>
+        // <class name="testscript.ManageFooterTest"/>
+  
+    <classes>
+      <class name="testScript.LogOutTest"/>
+      <class name="testScript.ManageCategoryTest"/>
+      <class name="testScript.ManageNewsTest"/>
+      <class name="testScript.AdminUserTest"/>
+      <class name="testScript.ManageFooterTextUpdateTest"/>
+      <class name="testScript.LoginTest"/>
+      <class name="testScript.ManageContactUsTest"/>
+      <class name="testScript.ManagenewsUpdateTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
