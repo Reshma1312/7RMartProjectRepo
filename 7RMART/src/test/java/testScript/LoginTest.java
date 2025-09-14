@@ -70,7 +70,7 @@ public class LoginTest extends Base
 	}
 	@DataProvider(name="LoginProvider")
 	public Object[][] getDataFromTestData() throws Exception{
-		return new Object[][] {{ExcelUtility.getStringData(4, 0,"loginpage"),ExcelUtility.getStringData(4,1,"loginpage")}};
+		return new Object[][] {{ExcelUtility.getStringData(4, 0,"login"),ExcelUtility.getStringData(4,1,"login")}};
 		
 	}	
 }

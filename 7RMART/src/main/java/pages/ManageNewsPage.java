@@ -109,7 +109,7 @@ public WebDriver driver;
 	            if (newsCol.getText().equalsIgnoreCase(textdata)) {
 	            	WebElement editBtn = row.findElement(By.xpath("./td[2]//a[contains(@href,'edit')]"));
 	            	PageUtility pageutility = new PageUtility();
-	            	pageutility.scrollBy(driver);
+	            	pageutility.scrollIntoView(driver, editBtn);
 	            	Thread.sleep(2000);
 	            	editBtn.click();
 	                newsdata.clear();

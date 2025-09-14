@@ -17,7 +17,7 @@ public class ManageCategoryTest extends Base
 	ManageCategoryPage managecategorypage;
 	LogoutPage logout;
 	@Test(groups = {"regression"})
-	public void verifyUserIsAbleToAddNewCategory() throws IOException
+	public void verifyUserIsAbleToAddNewCategory() throws Exception
 	{
 		String username=ExcelUtility.getStringData(1,0,"login");//the value given in double quotes should be same as the name given in excel sheet
 		String password=ExcelUtility.getStringData(1,1,"login");
@@ -29,7 +29,7 @@ public class ManageCategoryTest extends Base
 		//ManageCategoryPage managecategorypage=new ManageCategoryPage(driver);
 		managecategorypage=logout.clickMoreInfoCat();
 		FakerUtility fakerUtility=new FakerUtility();
-		String catName	=fakerUtility.creatARandomFirstName();
+		String catName	=fakerUtility.creatARandomLastName();
 		//fakerUtility.creatARandomLastName();
 		
 		//String catName=ExcelUtility.getStringData(0,0,"managecategory");//the value given in double quotes should be same as the name given in excel sheet
