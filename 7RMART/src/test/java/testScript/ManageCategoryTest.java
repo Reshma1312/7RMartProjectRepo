@@ -10,6 +10,7 @@ import pages.LoginPage;
 import pages.LogoutPage;
 import pages.ManageCategoryPage;
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 
 public class ManageCategoryTest extends Base
 {
@@ -27,9 +28,11 @@ public class ManageCategoryTest extends Base
 		
 		//ManageCategoryPage managecategorypage=new ManageCategoryPage(driver);
 		managecategorypage=logout.clickMoreInfoCat();
+		FakerUtility fakerUtility=new FakerUtility();
+		String catName	=fakerUtility.creatARandomFirstName();
+		//fakerUtility.creatARandomLastName();
 		
-		
-		String catName=ExcelUtility.getStringData(0,0,"managecategory");//the value given in double quotes should be same as the name given in excel sheet
+		//String catName=ExcelUtility.getStringData(0,0,"managecategory");//the value given in double quotes should be same as the name given in excel sheet
 		managecategorypage.clicknewCatBtn().enterCatInfo(catName).clickSelectFld().imageUpload().clickSave();
 		//managecategorypage.enterCatInfo(catName);
 		

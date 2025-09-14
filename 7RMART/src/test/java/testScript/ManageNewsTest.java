@@ -14,13 +14,13 @@ public class ManageNewsTest extends Base{
 	LogoutPage logoutpage;
 	@Test( retryAnalyzer=retry.Retry.class, description = "Testcase for creating new news")
 	public void creatingnewNews() throws IOException {
-		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
-		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
+		String username = ExcelUtility.getStringData(1, 0, "login");
+		String password = ExcelUtility.getStringData(1, 1, "login");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUserName(username).enterPassword(password);
 		//loginpage.enterPassword(password);
 		logoutpage = loginpage.clickSignIn();
-		String textdata = ExcelUtility.getStringData(1, 0, "ManageNewsPage");
+		String textdata = ExcelUtility.getStringData(0, 0, "managenewspage");
 		//ManageNewsPage managenewspage = new ManageNewsPage(driver);
 		managenewspage = logoutpage.clickingMoreInfoOfManageNews();
 		managenewspage.clickingNewInManageNews().enteringNews(textdata).clickingSaveOfNews();
@@ -32,14 +32,14 @@ public class ManageNewsTest extends Base{
 	
 	@Test( retryAnalyzer=retry.Retry.class, description = "Testcase for updating news")
 	public void updateExistingNews() throws Exception {
-		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
-		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
+		String username = ExcelUtility.getStringData(1, 0, "login");
+		String password = ExcelUtility.getStringData(1, 1, "login");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUserName(username).enterPassword(password);
 		//loginpage.enterPassword(password);
 		logoutpage = loginpage.clickSignIn();
-		String textdata = ExcelUtility.getStringData(1, 0, "ManageNewsPage");
-		String updatedNews = ExcelUtility.getStringData(1, 1, "ManageNewsPage");
+		String textdata = ExcelUtility.getStringData(0, 0, "managenewspage");
+		String updatedNews = ExcelUtility.getStringData(0, 1, "managenewspage");
 		//ManageNewsPage managenewspage = new ManageNewsPage(driver);
 		managenewspage = logoutpage.clickingMoreInfoOfManageNews();
 		managenewspage.clickingSearchBtnInManageNews().clickingSearchTextField(textdata).clickingSearchBtnInManageNews().updateNews(driver, textdata, updatedNews);

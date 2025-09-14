@@ -69,7 +69,7 @@ public class LoginTest extends Base
 		Assert.assertTrue(popup,Constant.LOGINWITHINCORRECTPASSWORD);
 	}
 	@DataProvider(name="LoginProvider")
-	public Object[][] getDataFromTestData() throws IOException{
+	public Object[][] getDataFromTestData() throws Exception{
 		return new Object[][] {{ExcelUtility.getStringData(4, 0,"loginpage"),ExcelUtility.getStringData(4,1,"loginpage")}};
 		
 	}	
