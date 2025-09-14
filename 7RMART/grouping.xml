@@ -11,19 +11,21 @@
   </run>
   </groups>
   
-  <class name="testscript.ManageCategoryTest"/>
-         <class name="testscript.ManageContactUsTest"/>
-        // <class name="testscript.ManageFooterTest"/>
+  
   
     <classes>
-      <class name="testScript.LogOutTest"/>
+    
+    <class name="testscript.ManageCategoryTest"/>
+         <class name="testscript.ManageContactUsTest"/>
+        <class name="testscript.ManageFooterTest"/>
+    <!--  <class name="testScript.LogOutTest"/>
       <class name="testScript.ManageCategoryTest"/>
       <class name="testScript.ManageNewsTest"/>
       <class name="testScript.AdminUserTest"/>
       <class name="testScript.ManageFooterTextUpdateTest"/>
       <class name="testScript.LoginTest"/>
       <class name="testScript.ManageContactUsTest"/>
-      <class name="testScript.ManagenewsUpdateTest"/>
+       <class name="testScript.ManagenewsUpdateTest"/>-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -2,7 +2,7 @@ package utilities;
 
 import com.github.javafaker.Faker;
 
-public class fakerUtility 
+public class FakerUtility 
 {
 	Faker faker = new Faker();
 

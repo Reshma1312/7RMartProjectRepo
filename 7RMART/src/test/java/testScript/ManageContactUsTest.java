@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.LoginPage;
 import pages.LogoutPage;
 import pages.ManageContactUsPage;
@@ -45,7 +46,7 @@ public class ManageContactUsTest extends Base
 		//managecontactuspage.saveAll();
 		
 		boolean contact= managecontactuspage.contactus();
-		Assert.assertTrue(contact);
+		Assert.assertTrue(contact,Constant.CONTACTUS);
 		
 		
 		

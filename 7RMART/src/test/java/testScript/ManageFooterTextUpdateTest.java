@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.LoginPage;
 import pages.LogoutPage;
 import pages.ManageFooterTextUpdatePage;
@@ -44,7 +45,7 @@ public class ManageFooterTextUpdateTest extends Base
 		//managefootertextupdatepage.scrollPage();
 		//managefootertextupdatepage.clickUpdate();
 		boolean footertext=managefootertextupdatepage.footertext();
-		Assert.assertTrue(footertext);
+		Assert.assertTrue(footertext,Constant.FOOTERTEXT);
 
 		
 	}

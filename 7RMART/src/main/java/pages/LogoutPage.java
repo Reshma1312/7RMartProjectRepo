@@ -53,10 +53,10 @@ public ManageFooterTextUpdatePage clickMoreInfoFooter()
 
 }
 
-	public ManagenewsPage clickMoreInfo_ManageNewsPage()
+	public ManageNewsPage clickingMoreInfoOfManageNews()
 	{
 	manageNews_moreinfo.click();
-	return new  ManagenewsPage(driver);
+	return new  ManageNewsPage(driver);
 
 	}
 	/*public ManagenewsUpdatePage clickMore_infoUpdate() 

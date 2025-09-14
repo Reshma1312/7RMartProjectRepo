@@ -5,10 +5,12 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.AdminUserPage;
 import pages.LoginPage;
 import pages.LogoutPage;
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 import utilities.PageUtility;
 
 public class AdminUserTest extends Base
@@ -29,8 +31,12 @@ public class AdminUserTest extends Base
 		adminuserpage=	logout.clickAdminUser();
 		
 		
-		String usertypevalue=ExcelUtility.getStringData(0, 0, "newadminuser");
-		String passwordvalue=ExcelUtility.getStringData(0, 1, "newadminuser");
+		//String usertypevalue=ExcelUtility.getStringData(0, 0, "newadminuser");
+		//String passwordvalue=ExcelUtility.getStringData(0, 1, "newadminuser");
+		FakerUtility fakerUtility=new FakerUtility();
+		String usertypevalue=fakerUtility.creatARandomFirstName();
+		String passwordvalue=fakerUtility.creatARandomLastName();
+				
 		adminuserpage.clickNewBtn().enterUserType(usertypevalue).enterPassword(passwordvalue);
 		//adminuserpage.enterUserType(usertypevalue);
 		//adminuserpage.enterPassword(passwordvalue);
@@ -41,7 +47,7 @@ public class AdminUserTest extends Base
 		adminuserpage.clickSave();
 		
 		 boolean alertmsg=adminuserpage.alertMessage();
-		 Assert.assertTrue(alertmsg);
+		 Assert.assertTrue(alertmsg,Constant.NEWADMINUSER);
 		
 		
 		

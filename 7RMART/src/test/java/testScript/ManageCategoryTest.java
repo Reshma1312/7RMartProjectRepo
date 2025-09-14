@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.LoginPage;
 import pages.LogoutPage;
 import pages.ManageCategoryPage;
@@ -38,6 +39,6 @@ public class ManageCategoryTest extends Base
 		//managecategorypage.clickSave();
 		
 		boolean success=managecategorypage.success();
-		Assert.assertTrue(success);
+		Assert.assertTrue(success,Constant.NEWCATEGORY);
 	}
 }

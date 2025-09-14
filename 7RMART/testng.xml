@@ -11,14 +11,16 @@
 
   <test thread-count="5" name="Test">
     <classes>
-    <!-- <class name="testScript.LogOutTest"/>
+     <class name="testScript.LogOutTest"/>
       <class name="testScript.ManageCategoryTest"/>
       <class name="testScript.ManageNewsTest"/>
       <class name="testScript.AdminUserTest"/>
       <class name="testScript.ManageFooterTextUpdateTest"/>
       <class name="testScript.ManageContactUsTest"/>
-      <class name="testScript.ManagenewsUpdateTest"/>-->
       <class name="testScript.LoginTest"/>
+      
+     <!-- <class name="testScript.ManagenewsUpdateTest"/>-->
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

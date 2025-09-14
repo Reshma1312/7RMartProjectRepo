@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
@@ -34,7 +35,7 @@ public class LoginTest extends Base
 		loginpage.enterPassword(password);
 		loginpage.clickSignIn();
 		boolean popup=loginpage.alertPopUp();
-		Assert.assertTrue(popup);
+		Assert.assertTrue(popup,Constant.LOGINWITHINVALIDCREDENTIALS);
 	}
 	public void verifyTheUserIsAbleToLoginUsingInvalidUserName() throws IOException
 	{
@@ -49,7 +50,7 @@ public class LoginTest extends Base
 		loginpage.enterPassword(password);
 		loginpage.clickSignIn();
 		boolean popup=loginpage.alertPopUp();
-		Assert.assertTrue(popup);
+		Assert.assertTrue(popup,Constant.LOGINWITHINVALIDUSERNAME);
 	}
 	@Test(dataProvider ="LoginProvider")
 	public void verifyTheUserIsAbleToLoginUsingInvalidPassword(String username,String password) throws IOException
@@ -65,7 +66,7 @@ public class LoginTest extends Base
 		loginpage.enterPassword(password);
 		loginpage.clickSignIn();
 		boolean popup=loginpage.alertPopUp();
-		Assert.assertTrue(popup);
+		Assert.assertTrue(popup,Constant.LOGINWITHINCORRECTPASSWORD);
 	}
 	@DataProvider(name="LoginProvider")
 	public Object[][] getDataFromTestData() throws IOException{

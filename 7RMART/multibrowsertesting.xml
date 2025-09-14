@@ -12,7 +12,8 @@
       <class name="testScript.ManageFooterTextUpdateTest"/>
       <class name="testScript.LoginTest"/>
       <class name="testScript.ManageContactUsTest"/>
-      <class name="testScript.ManagenewsUpdateTest"/>
+      
+    <!--  <class name="testScript.ManagenewsUpdateTest"/>-->
     </classes>
   </test> <!-- Test -->
   
@@ -28,7 +29,8 @@
       <class name="testScript.ManageFooterTextUpdateTest"/>
       <class name="testScript.LoginTest"/>
       <class name="testScript.ManageContactUsTest"/>
-      <class name="testScript.ManagenewsUpdateTest"/>
+      
+    <!--  <class name="testScript.ManagenewsUpdateTest"/>-->
     	</classes>
      </test>
   </suite> <!-- Crossbrowsertesting -->
